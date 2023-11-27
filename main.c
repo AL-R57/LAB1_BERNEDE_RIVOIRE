@@ -5,6 +5,6 @@
 #include "constantHeader.h"
 
 int main() {
-    write(STDOUT_FILENO,WELCOME_MSG,strlen(WELCOME_MSG));
+    shell();
     return 0;
 }

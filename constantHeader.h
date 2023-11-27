@@ -1,11 +1,12 @@
-//
-// Created by inves on 27/11/2023.
-//
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
 
 #ifndef UNTITLED_CONSTANTHEADER_H
 #define UNTITLED_CONSTANTHEADER_H
 
-#define WELCOME_MSG "Welcome to ENSEA Tiny Shell \n Type 'exit' to quit."
+#define WELCOME_MSG "Welcome to ENSEA Tiny Shell \nType 'exit' to quit.\nenseash %"
+void shell();
 
 #endif //UNTITLED_CONSTANTHEADER_H
 
