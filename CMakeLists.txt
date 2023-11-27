@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.26)
-project(untitled C)
+project(lab1 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(untitled main.c
+add_executable(lab1 main.c
         constantHeader.h
         shell.c
+        command.c
 )

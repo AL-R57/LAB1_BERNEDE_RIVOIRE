@@ -1,7 +1,7 @@
 #include "constantHeader.h"
 
-void shell(){
-    write(STDOUT_FILENO,WELCOME_MSG,strlen(WELCOME_MSG));
+void shell(char* Macro){
+    write(STDOUT_FILENO,Macro,strlen(Macro));
 }
 
 

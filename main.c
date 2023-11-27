@@ -1,10 +1,9 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
-
 #include "constantHeader.h"
 
 int main() {
-    shell();
-    return 0;
+
+    shell(WELCOME_MSG);
+    command();
+
+    exit(EXIT_SUCCESS);
 }
