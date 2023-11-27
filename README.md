@@ -14,10 +14,5 @@ build.ninja	CMakeFiles	     lab1      Testing
 CMakeCache.txt	cmake_install.cmake  lab1.exe
 enseash %
 
-## Question 3
-enseash %exit
-Goodbye!
-
-Process finished with exit code 0
 
 
