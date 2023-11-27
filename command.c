@@ -26,6 +26,12 @@ void command(){
             //Parent process
             wait(&status);
         }
+
+        // Check if the user wants to exit
+        if (strcmp(input,"exit") == 0){
+            write(STDOUT_FILENO,"Goodbye!\n",9);
+            break;
+        }
     }
 }
 
