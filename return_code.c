@@ -11,7 +11,7 @@ void return_code(int status,struct timespec start, struct timespec stop){
         sprintf(buff,"enseash [sign:%d |%ld ms] %%", WTERMSIG(status),execution_time);
         write(STDOUT_FILENO,buff,strlen(buff));
     } else {
-        write(STDOUT_FILENO,"enseash %%",10);
+        write(STDOUT_FILENO,"enseaSh %%",10);
     }
 }
 
