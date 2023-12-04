@@ -14,4 +14,3 @@ void return_code(int status,struct timespec start, struct timespec stop){
         write(STDOUT_FILENO,"enseaSh %%",10);
     }
 }
-
