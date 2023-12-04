@@ -18,4 +18,7 @@ We learned the examination of status returned by a termination child
 using WIFEXITED(), WIFSIGNALED(), WEXITESTATUS(), WSIGNALED()
 to display the return code or signal of the previous command.
 
+## Question 5
+The clock_gettime function allowed us to display the time needed to execute 
+the previous command in the shell. We saw how to use the timespec structs.
 

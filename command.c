@@ -3,6 +3,9 @@
 void command(){
     char input[MAX_INPUT_SIZE] = {0};
     int status;
+    struct timespec start;
+    struct timespec stop;
+
     while(1){
 
         //read user input
@@ -13,6 +16,9 @@ void command(){
 
         //Remove the newline character '\n' from the input
         input[number_of_bytes_read - 1] = '\0';
+
+        // Start the timer
+        clock_gettime(CLOCK_MONOTONIC, &start);
 
         // Execute the command
         pid_t pid = fork();
@@ -26,7 +32,8 @@ void command(){
         } else {
             //Parent process
             wait(&status);
-            return_code(status);
+            clock_gettime(CLOCK_MONOTONIC,&stop);
+            return_code(status,start,stop);
         }
 
         // Check if the user wants to exit
