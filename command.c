@@ -20,19 +20,35 @@ void command(){
         // Start the timer
         clock_gettime(CLOCK_MONOTONIC, &start);
 
+        //arguments recovery
+        char splitter[]=" ";
+        int i = 0;
+        char **arguments_list = NULL;
+        char *arguments = strtok(input, splitter);
+        while(arguments != NULL){
+            //allocation of the memory
+            arguments_list = realloc(arguments_list, (i + 1) * sizeof(char *));
+            arguments_list[i] = malloc(strlen(arguments));
+            strcpy(arguments_list[i], arguments);
+
+            arguments = strtok(NULL, splitter);
+            i++;
+        }
+
         // Execute the command
         pid_t pid = fork();
         if (pid==-1){
             perror("Fork failed");
         }
-        else if (pid == 0){
-            //Child process
-            execlp(input,input,NULL);
+        else if(pid == 0) {
+            // Child process
+            execvp(arguments_list[0], arguments_list);
+            free(arguments_list); // free the allocated memory
             exit(EXIT_FAILURE);
         } else {
-            //Parent process
+            // Parent process
             wait(&status);
-            clock_gettime(CLOCK_MONOTONIC,&stop);
+            clock_gettime(CLOCK_MONOTONIC, &stop);
             return_code(status,start,stop);
         }
 
