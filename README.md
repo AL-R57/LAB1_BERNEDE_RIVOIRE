@@ -22,4 +22,3 @@ to display the return code or signal of the previous command.
 The clock_gettime function allowed us to display the time needed to execute 
 the previous command in the shell. We saw how to use the timespec structs.
 
-

@@ -17,5 +17,3 @@ void return_code(int status,struct timespec start, struct timespec stop);
 #endif //UNTITLED_CONSTANTHEADER_H
 #define MAX_INPUT_SIZE 1024
 
-
-
