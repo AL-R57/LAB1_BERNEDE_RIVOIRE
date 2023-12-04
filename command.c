@@ -5,10 +5,11 @@ void command(){
     int status;
     while(1){
 
-        shell(PROMPT);
-
         //read user input
         int number_of_bytes_read = read(STDIN_FILENO,input,sizeof(input));
+        if (number_of_bytes_read == -1) {
+            perror("Error reading input");
+        }
 
         //Remove the newline character '\n' from the input
         input[number_of_bytes_read - 1] = '\0';
@@ -21,10 +22,11 @@ void command(){
         else if (pid == 0){
             //Child process
             execlp(input,input,NULL);
-            exit(EXIT_SUCCESS);
+            exit(EXIT_FAILURE);
         } else {
             //Parent process
             wait(&status);
+            return_code(status);
         }
 
         // Check if the user wants to exit

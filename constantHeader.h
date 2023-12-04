@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <sys/wait.h>
+#include <time.h>
 
 #ifndef UNTITLED_CONSTANTHEADER_H
 #define UNTITLED_CONSTANTHEADER_H
@@ -11,6 +12,7 @@
 #define PROMPT "enseash %"
 void shell(char* Macro);
 void command();
+void return_code(int status);
 
 #endif //UNTITLED_CONSTANTHEADER_H
 #define MAX_INPUT_SIZE 1024

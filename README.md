@@ -1,23 +1,20 @@
 # LAB1_BERNEDE_RIVOIRE
 
 ## Question 1
-write function
+We learned how to use the write function with STDOUT_FILENO to display 
+the background of our tinyshell: the welcome message and "enseash %".
 
 ## Question 2
-read-eval-printloop
-
-/media/sf_CLionProjects/LAB1_tinyshell/cmake-build-debug/lab1
-Welcome to ENSEA Tiny Shell
-Type 'exit' to quit.
-enseash %ls
-build.ninja	CMakeFiles	     lab1      Testing
-CMakeCache.txt	cmake_install.cmake  lab1.exe
-enseash %
+We learned how to use the read function with STDIN_FILENO to read and execute
+the command (with the execlp command) in the shell and display 
+the prompt "enseash %" after it.
 
 ## Question 3
-enseash %exit
-Goodbye!
+We learned how to exit the shell by writing "exit" with
+if loop, fork() and break function.
 
-Process finished with exit code 0
-
+## Question 4
+We learned the examination of status returned by a termination child 
+using WIFEXITED(), WIFSIGNALED(), WEXITESTATUS(), WSIGNALED()
+to display the return code or signal of the previous command.
 

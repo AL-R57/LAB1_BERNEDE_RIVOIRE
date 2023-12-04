@@ -7,4 +7,5 @@ add_executable(lab1 main.c
         constantHeader.h
         shell.c
         command.c
+        "return_code.c"
 )
