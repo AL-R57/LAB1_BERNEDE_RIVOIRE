@@ -4,6 +4,7 @@
 #include <string.h>
 #include <sys/wait.h>
 #include <time.h>
+#include <fcntl.h>
 
 #ifndef UNTITLED_CONSTANTHEADER_H
 #define UNTITLED_CONSTANTHEADER_H
